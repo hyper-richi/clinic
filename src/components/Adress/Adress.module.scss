@@ -1,0 +1,13 @@
+.adress {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    &__flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__street {
+        color: var(--txt-secondary);
+    }
+}
