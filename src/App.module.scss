@@ -7,8 +7,6 @@
 
 .header {
     background-color: var(--white);
-    min-height: 100vh;
-    display: flex;
 
     &__box {
         display: flex;
@@ -35,5 +33,17 @@
 
         height: 100%;
         margin-right: 35px;
+    }
+}
+
+.nav {
+    height: 43px;
+    background-color: var(--primary-nav);
+    &__list {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap: 30px;
+        color: var(--white);
     }
 }

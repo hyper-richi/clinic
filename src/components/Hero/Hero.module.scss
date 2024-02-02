@@ -1,0 +1,43 @@
+.hero {
+    height: 533px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    /*  @include tablet {
+        height: 50vh;
+    } */
+    &__picture {
+        // background: url("../../assets/webp/hero.webp") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    &__content {
+        width: 50%;
+        margin: auto;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+    }
+}
+
+.picture {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-width: 950px;
+
+    &__box {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        margin-left: 10px;
+    }
+}

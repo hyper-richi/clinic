@@ -5,6 +5,7 @@ import { ReactComponent as LogoIcon } from "./assets/svg/logo.svg";
 import { ReactComponent as WhatsappIcon } from "./assets/svg/whatsapp.svg";
 import Adress from "./components/Adress/Adress";
 import Button from "./components/Button/Button";
+import Hero from "./components/Hero/Hero";
 
 function App() {
     return (
@@ -28,8 +29,28 @@ function App() {
                         <Button variant="primary">Записаться на прием</Button>
                     </div>
                 </div>
-                <nav></nav>
+                <nav className={styles.nav}>
+                    <ul className={classNames(styles.nav__list, "container")}>
+                        <li className={styles.nav__item}>
+                            <a href="/">О клинике</a>
+                        </li>
+                        <li className={styles.nav__item}>
+                            <a href="/">Услуги</a>
+                        </li>
+                        <li className={styles.nav__item}>
+                            <a href="/">Специалисты</a>
+                        </li>
+                        <li className={styles.nav__item}>
+                            <a href="/">Цены</a>
+                        </li>
+                        <li className={styles.nav__item}>
+                            <a href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
+            <div style={{ width: "1920px", border: "1px solid black", margin: "0 auto" }}>1920</div>
+            <Hero />
             <main></main>
             <footer></footer>
         </div>
