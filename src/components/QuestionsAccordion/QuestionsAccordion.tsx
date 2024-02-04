@@ -17,7 +17,7 @@ const QuestionsAccordion: FC<QuestionsAccordionProps> = ({ question }) => {
             <div className={styles.accordion__header}>
                 <h3 className={styles.accordion__title}>{question.title}</h3>
 
-                <Button onClick={() => setCloseAccordion(!closeAccordion)} variant="clear">
+                <Button className={styles.accordion__btn} onClick={() => setCloseAccordion(!closeAccordion)} variant="clear">
                     {closeAccordion ? <PlusIcon /> : <MinusIcon />}
                 </Button>
             </div>

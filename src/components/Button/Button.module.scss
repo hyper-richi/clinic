@@ -1,32 +1,31 @@
 @use "../../scss/" as *;
 
-.Button {
+.button {
     cursor: pointer;
     border-radius: var(--border-radius);
     padding: 11px 23px;
-    display: flex;
-    align-items: center;
     white-space: nowrap;
-
     text-align: center;
     font-size: 14px;
     line-height: 21px;
-    height: fit-content;
+    width: 196px;
+    height: 43px;
     outline: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .primary {
     background-color: var(--primary-btn);
     color: var(--white);
-    border: none;
-    outline: none;
+    border: 1px solid var(--primary-btn);
 
     &:not([disabled]):hover {
         background-color: var(--secondary-btn);
+        border: 1px solid var(--secondary-btn);
     }
     &:not([disabled]):active {
         background-color: var(--primary-btn);
+        border: 1px solid var(--primary-btn);
     }
 }
 
@@ -38,10 +37,12 @@
     &:not([disabled]):hover {
         background-color: var(--primary-btn);
         color: var(--white);
+        border: 1px solid var(--primary-btn);
     }
     &:not([disabled]):active {
         background-color: var(--secondary-btn);
         color: var(--white);
+        border: 1px solid var(--secondary-btn);
     }
 }
 
@@ -50,6 +51,10 @@
     border: none;
     background: none;
     outline: none;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
 }
 
 .disabled {

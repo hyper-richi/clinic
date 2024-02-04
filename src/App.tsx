@@ -10,8 +10,20 @@ import Slide from "./components/Slide/Slide";
 import Logo from "./components/Logo/Logo";
 import Nav from "./components/Nav/Nav";
 import LinksSocials from "./components/LinksSocials/LinksSocials";
+import MakeAppointmentModal from "./components/MakeAppointmentModal/MakeAppointmentModal";
+import { useCallback, useState } from "react";
 
 function App() {
+    const [openModal, setOpenModal] = useState(false);
+
+    const onShowModal = useCallback(() => {
+        setOpenModal(true);
+    }, []);
+
+    const onCloseModal = useCallback(() => {
+        setOpenModal(false);
+    }, []);
+
     return (
         <div className={styles.app}>
             <header className={styles.header}>
@@ -28,12 +40,14 @@ function App() {
                                 +7(863) 000 00 00
                             </a>
                         </div>
-                        <Button variant="primary">Записаться на прием</Button>
+                        <Button variant="primary" onClick={onShowModal}>
+                            Записаться на прием
+                        </Button>
                     </div>
                 </div>
                 <Nav variant="header" />
             </header>
-            {/* <div style={{ width: "1920px", border: "1px solid black", margin: "0 auto" }}>1920</div> */}
+            {/*  <div style={{ width: "1920px", border: "1px solid black", margin: "0 auto" }}>1920</div> */}
             <Hero />
             <main className={styles.main}>
                 <div className="container">
@@ -46,10 +60,11 @@ function App() {
                     <div className={styles.footer__content}>
                         <Logo fill={"#FFFFFF"} />
                         <Nav variant="footer" />
-                        <LinksSocials/>
+                        <LinksSocials />
                     </div>
                 </div>
             </footer>
+            <MakeAppointmentModal isOpen={openModal} onClose={onCloseModal} />
         </div>
     );
 }

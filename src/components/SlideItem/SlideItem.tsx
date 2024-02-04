@@ -29,16 +29,15 @@ export const SlideItem: FC<SlideItemProps> = ({ item, className }) => {
                         <span className={styles.price__discount}>{item.discount + "₽"}</span>
                     </div>
                     <div className={styles.content__btns}>
-                        <Button variant="primary" onClick={() => {}}>
+                        <Button className={styles.content__btn} variant="primary" onClick={() => {}}>
                             Записаться
                         </Button>
-                        <Button variant="outline" onClick={() => {}}>
+                        <Button className={styles.content__btn} variant="outline" onClick={() => {}}>
                             Подробнее
                         </Button>
                     </div>
                 </div>
             </div>
-            {/*  */}
         </div>
     );
 };

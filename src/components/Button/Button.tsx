@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from "react";
-import { TMods } from "../../global/types/global";
+import { Mods } from "../../global/types/global";
 import classNames from "classnames";
 import styles from "./Button.module.scss";
 
@@ -12,7 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<ButtonProps> = (props) => {
     const { className, children, variant, disabled, ...otherProps } = props;
-    const mods: TMods = {
+    const mods: Mods = {
         [styles.disabled]: disabled,
     };
 
@@ -20,7 +20,7 @@ const Button: FC<ButtonProps> = (props) => {
         <button
             type="button"
             disabled={disabled}
-            className={classNames(styles.Button, mods, [className, styles[variant]])}
+            className={classNames(styles.button, mods, [className, styles[variant]])}
             {...otherProps}>
             {children}
         </button>

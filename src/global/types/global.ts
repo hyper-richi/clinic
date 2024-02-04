@@ -1,4 +1,4 @@
-export type TMods = Record<string, boolean | string | undefined>;
+export type Mods = Record<string, boolean | string | undefined>;
 
 export interface DataQuestions {
     data: Question[];
