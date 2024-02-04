@@ -1,0 +1,18 @@
+.accordion {
+    padding: 40px;
+    padding-right: 40px;
+    background-color: var(--bg-tab);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+    }
+}

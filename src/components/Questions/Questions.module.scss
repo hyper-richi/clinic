@@ -1,0 +1,15 @@
+.questions {
+    margin-bottom: 100px;
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 40px;
+    }
+}

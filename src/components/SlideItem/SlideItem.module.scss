@@ -1,0 +1,113 @@
+@use "../../scss/" as *;
+
+.slide {
+    &__item {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        /*  @include tablet {
+        height: 50vh;
+    } */
+
+        /*  &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //  @include overlay();
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
+    } */
+    }
+    &__picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        width: 692px;
+        height: 440px;
+    }
+
+    &__content {
+        position: relative;
+    }
+}
+
+.content {
+    &__info {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        padding: 53px 141px 125px 63px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 38x;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    &__target {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        list-style: disc;
+        font-size: 16px;
+        margin-bottom: 33px;
+        li::marker {
+            color: var(--primary-nav);
+        }
+        li:not(:last-child) {
+            margin-bottom: 14px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.price {
+    &__total {
+        font-size: 20px;
+    }
+    &__discount {
+        color: var(--txt-secondary);
+        font-size: 16px;
+        text-decoration: line-through;
+    }
+}

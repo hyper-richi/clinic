@@ -3,7 +3,7 @@ import { TMods } from "../../global/types/global";
 import classNames from "classnames";
 import styles from "./Button.module.scss";
 
-export type ButtonVariant = "outline" | "primary";
+export type ButtonVariant = "outline" | "primary" | "clear";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;

@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import heroSrc from "../../assets/webp/hero.webp";
+
 const Hero = () => {
     return (
         <section className={classNames(styles.hero, "container")}>

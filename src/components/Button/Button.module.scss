@@ -4,7 +4,8 @@
     cursor: pointer;
     border-radius: var(--border-radius);
     padding: 11px 23px;
-
+    display: flex;
+    align-items: center;
     white-space: nowrap;
 
     text-align: center;
@@ -30,7 +31,7 @@
 }
 
 .outline {
-    background-color: var(--white);
+    background-color: transparent;
     color: var(--primary-btn);
     border: 1px solid var(--primary-btn);
 
@@ -44,8 +45,13 @@
     }
 }
 
+.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
 .disabled {
-    opacity: 0.5;
-    box-shadow: none;
     cursor: default;
 }
