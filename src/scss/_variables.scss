@@ -2,36 +2,27 @@
     --txt-primary: #364844;
     --txt-secondary: #868686;
     --txt-additional: #c0c0c0;
-    --border-radius: 50px;
     --border-color-input: #e1e1e1;
     --primary-btn: #0dbc91;
     --secondary-btn: #00d29f;
-    --primary-nav: #1fa181;
-    --bg-tab: #f8fbfa;
+    --bg-nav: #1fa181;
+    --bg-accordion: #f8fbfa;
     --bg-footer: #08664f;
     --bg-overlay: #45927f;
-    --color-additional: #ffce00; // 3
+    --bg-mobile-overlay: rgba(69, 146, 127, 0.9);
+    --bg-mobile-btn: #F6F6F6;
+    --bg-slide: #e2f0ef;
+
     --white: #fff;
+    --error: #da5151;
+    --success: #2e7d32;
+    --border-radius: 50px;
 }
 
-$txt-main-color: #364844;
-$txt-light-gray: #868686;
-
-$white: #fff;
-
-$body-bg: #ffffff;
-$txt-color: #fff;
-$error: #da5151;
-$black: #000;
-
-$box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-$header-height: 8rem;
-$header-shrink-height: 5rem;
-$border-radius-card: 10px;
-
-$mobile-width: 630px;
-$mobileLg-width: 950px;
-$tablet-width: 1024px;
+$mobileS-width: 375px;
+$mobileM-width: 425px;
+$mobileL-width: 768px;
+$tabletS-width: 1200px;
+$tabletL-width: 1440px;
 
 $font-family: "PT Sans Caption", sans-serif;

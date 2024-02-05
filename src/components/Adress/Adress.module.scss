@@ -1,7 +1,14 @@
+@use "../../scss/" as *;
+
 .adress {
     display: flex;
     gap: 5px;
     align-items: flex-start;
+
+    @include mobileL {
+        display: none;
+    }
+
     &__flex {
         display: flex;
         flex-direction: column;

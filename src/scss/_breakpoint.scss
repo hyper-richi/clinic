@@ -1,18 +1,30 @@
-@use './variables' as *;
+@use "./variables" as *;
 
-@mixin mobile {
-    @media only screen and (max-width: $mobile-width) {
+/* $mobileS-width: 375px;
+$mobileM-width: 425px;
+$mobileL-width: 768px;
+$tabletS-width: 1200px;
+$tabletL-width: 1440px; */
+
+@mixin mobileS {
+    @media only screen and (max-width: $mobileS-width) {
         @content;
     }
 }
-@mixin mobileLg {
-    @media only screen and (max-width: $mobileLg-width) {
+@mixin mobileL {
+    @media only screen and (max-width: $mobileL-width) {
+        @content;
+    }
+}
+@mixin tabletS {
+    @media only screen and (max-width: $tabletS-width) {
         @content;
     }
 }
 
-@mixin tablet {
-    @media only screen and (max-width: $tablet-width) {
+
+@mixin tabletL {
+    @media only screen and (max-width: $tabletL-width) {
         @content;
     }
 }

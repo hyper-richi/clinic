@@ -17,7 +17,6 @@ import Button from "../Button/Button";
 import React from "react";
 
 const Slide: FC = () => {
-    console.log("Slide: ");
     const swiperRef = useRef<SwiperCore | null>(null);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 

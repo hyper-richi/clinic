@@ -12,9 +12,12 @@ import Nav from "./components/Nav/Nav";
 import LinksSocials from "./components/LinksSocials/LinksSocials";
 import MakeAppointmentModal from "./components/MakeAppointmentModal/MakeAppointmentModal";
 import { useCallback, useState } from "react";
+import Hamburger from "./components/Hamburger/Hamburger";
+import MobileNav from "./components/MobileNav/MobileNav";
 
 function App() {
     const [openModal, setOpenModal] = useState(false);
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
     const onShowModal = useCallback(() => {
         setOpenModal(true);
@@ -24,16 +27,31 @@ function App() {
         setOpenModal(false);
     }, []);
 
+    const onShowMobileNav = useCallback(() => {
+        setOpenMobileMenu(true);
+    }, []);
+
+    const onCloseMobileNav = useCallback(() => {
+        setOpenMobileMenu(false);
+    }, []);
+
     return (
         <div className={styles.app}>
             <header className={styles.header}>
                 <div className={classNames(styles.header__top, "container")}>
                     <div className={styles.header__box}>
+                        <Hamburger onCloseMobileNav={onCloseMobileNav} onShowMobileNav={onShowMobileNav} />
                         <Logo fill={"#0DBC91"} />
                         <Adress />
+                        <div className={styles.adress_mobile}>
+                            <a className={styles.phone_mobile} href="tel:+7(863) 000 00 00">
+                                +7(863) 000 00 00
+                            </a>
+                            <div className={styles.adress__city_mobile}>Ростов-на-Дону</div>
+                        </div>
                     </div>
 
-                    <div className={styles.header__box}>
+                    <div className={styles.header__box__phone}>
                         <div className={styles.header__phone}>
                             <WhatsappIcon />
                             <a className={styles.phone} href="tel:+7(863) 000 00 00">
@@ -46,8 +64,8 @@ function App() {
                     </div>
                 </div>
                 <Nav variant="header" />
+                {openMobileMenu && <MobileNav />}
             </header>
-            {/*  <div style={{ width: "1920px", border: "1px solid black", margin: "0 auto" }}>1920</div> */}
             <Hero />
             <main className={styles.main}>
                 <div className="container">

@@ -13,7 +13,7 @@ export const SlideItem: FC<SlideItemProps> = ({ item, className }) => {
                 <img className={styles.slide__picture} src={item.pictureSrc} alt="hero__picture" />
             </div>
             <div className={styles.slide__content}>
-                <svg width="100%" height="100%" viewBox="0 0 613 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.slide__svg} width="100%" height="100%" viewBox="0 0 613 440" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 5C0 2.23857 2.23858 0 5 0H494.949L613 440H4.99999C2.23857 440 0 437.761 0 435V5Z" fill="#E2F0EF" />
                 </svg>
                 <div className={styles.content__info}>

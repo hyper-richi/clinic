@@ -21,11 +21,11 @@ input {
 
 html {
     font-size: 100%;
-    @include tablet {
+    @include tabletS {
         font-size: 80%;
     }
 
-    @include mobile {
+    @include mobileS {
         font-size: 60%;
     }
 }
@@ -55,4 +55,9 @@ img {
     max-width: 1140px;
     margin: 0 auto;
     width: 100%;
+
+    @include tabletS {
+        max-width: none;
+        padding: 0px 18px 0px 17px;
+    }
 }

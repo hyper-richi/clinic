@@ -3,9 +3,11 @@
 .slide {
     height: 440px;
     margin-bottom: 92px;
-    @include tablet {
-        height: 50vh;
+
+    @include tabletS {
+        height: auto;
     }
+   
 
     &__button {
         display: flex;

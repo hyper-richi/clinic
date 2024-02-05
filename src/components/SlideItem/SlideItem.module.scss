@@ -7,29 +7,10 @@
         height: 100%;
         display: flex;
         position: relative;
-        /*  @include tablet {
-        height: 50vh;
-    } */
 
-        /*  &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        //  @include overlay();
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
-    } */
+        @include tabletS {
+            flex-direction: column;
+        }
     }
     &__picture {
         display: block;
@@ -46,10 +27,25 @@
         right: 0;
         width: 692px;
         height: 440px;
+
+        @include tabletS {
+            width: auto;
+            position: static;
+        }
     }
 
     &__content {
         position: relative;
+
+        @include tabletS {
+            border-color: var(--bg-slide);
+        }
+    }
+
+    &__svg {
+        @include tabletS {
+            display: none;
+        }
     }
 }
 
@@ -62,6 +58,12 @@
         top: 0;
         z-index: 1;
         padding: 53px 141px 125px 63px;
+
+        @include tabletS {
+            position: static;
+            padding: 22px 30px 112px 23px;
+            background-color: var(--bg-slide);
+        }
     }
 
     &__title {
@@ -83,7 +85,7 @@
         list-style: disc;
         font-size: 16px;
         margin-bottom: 33px;
-        padding-left: 15px;
+        padding-left: 17px;
         font-style: normal;
         font-weight: 400;
         //column-width: 100px;
@@ -95,7 +97,7 @@
         }
 
         li::marker {
-            color: var(--primary-nav);
+            color: var(--bg-nav);
         }
         li:not(:last-child) {
             margin-bottom: 12px;

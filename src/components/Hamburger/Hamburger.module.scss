@@ -1,0 +1,11 @@
+@use "../../scss/" as *;
+
+.hamburger {
+    color: var(--bg-nav);
+    display: none;
+    width: 36px;
+    justify-content: center;
+    @include mobileL {
+        display: flex;
+    }
+}

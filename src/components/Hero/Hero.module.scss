@@ -1,15 +1,18 @@
+@use "../../scss/" as *;
+
 .hero {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 533px;
+    min-height: 288px;
+    // max-height: 695px;
     width: 100%;
     background-color: var(--bg-tab);
     margin: 0 auto;
 
-    /*  @include tablet {
-        height: 50vh;
-    } */
+    @include tabletS {
+        background-color: var(--white);
+    }
 
     &__container {
         max-width: 1920px;
@@ -19,36 +22,66 @@
     }
 
     &__picture {
-        // background: url("../../assets/webp/hero.webp") center/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
         max-width: 950px;
+        min-width: 375px;
+        min-height: 533px;
+
         width: 100%;
-        position: absolute;
-        left: 50%;
-        top: 0;
         height: 100%;
-       // margin-left: 10px;
+        @include tabletS {
+            max-width: 100%;
+            min-height: 288px;
+        }
     }
 
     &__content {
         width: 100%;
         display: flex;
-        max-width: 1140px;
-        margin: 0 auto;
-        position: relative;
+        // max-width: 1140px;
+        //    margin: 0 auto;
+        //    position: relative;
+        @include tabletS {
+            flex-direction: column-reverse;
+        }
     }
 
     &__wrap {
-        margin: auto 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include tabletS {
+            justify-content: center;
+            background-color: var(--bg-accordion);
+        }
+    }
+
+    &__text {
+        margin-top: 153px;
+        width: 100%;
+        max-width: 580px;
+
+        @include tabletS {
+            margin-top: 0px;
+            padding: 34px 18px 53px;
+        }
     }
 
     &__title {
+        word-break: break-all;
         font-size: 36px;
         font-weight: 700;
-        line-height: auto;
+        line-height: 39px;
         margin-bottom: 14px;
+        max-width: 416px;
+
+        @include tabletS {
+            font-size: 26px;
+            line-height: 29px;
+        }
     }
 
     &__description {
