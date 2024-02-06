@@ -3,7 +3,11 @@ import styles from "./MobileNav.module.scss";
 import { FC } from "react";
 import Button from "../Button/Button";
 
-const MobileNav: FC = () => {
+interface MobileNavProps {
+    setOpenModal: (value:boolean) => void;
+}
+
+const MobileNav: FC<MobileNavProps> = ({ setOpenModal }) => {
     return (
         <nav className={classNames(styles.nav)}>
             <ul className={classNames(styles.nav__list)}>
@@ -23,7 +27,9 @@ const MobileNav: FC = () => {
                     <a href="/">Контакты</a>
                 </li>
             </ul>
-            <Button className={styles.btn} variant="primary"> Записаться на прием </Button>
+            <Button className={styles.btn} variant="primary" onClick={() => setOpenModal(true)}>
+                Записаться на прием
+            </Button>
         </nav>
     );
 };

@@ -77,38 +77,50 @@ const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) =>
                     </p>
                 </div>
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                    <div className={styles.input__group}>
-                        <label htmlFor="fullName" className={styles.label}>
-                            ФИО
-                        </label>
-                        <input type="text" {...register("fullName", { required: true })} placeholder="ФИО" className={styles.input} />
-                        {errors.fullName && <span className={styles.error}>Заполните обязательное поле</span>}
+                    <div className={styles.form__group}>
+                        <div className={styles.input__group}>
+                            <label htmlFor="fullName" className={styles.label}>
+                                ФИО
+                            </label>
+                            <input
+                                type="text"
+                                {...register("fullName", { required: true })}
+                                placeholder="ФИО"
+                                className={styles.input}
+                            />
+                            {errors.fullName && <span className={styles.error}>Заполните обязательное поле</span>}
+                        </div>
+                        <div className={styles.input__group}>
+                            <label htmlFor="phone" className={styles.label}>
+                                Номер телефона
+                            </label>
+                            <input
+                                type="text"
+                                {...register("phone", { required: true })}
+                                placeholder="Номер телефона"
+                                className={styles.input}
+                            />
+                            {errors.phone && <span className={styles.error}>Заполните обязательное поле</span>}
+                        </div>
+                        <div className={styles.input__group}>
+                            <label htmlFor="email" className={styles.label}>
+                                Электронная почта
+                            </label>
+                            <input
+                                type="text"
+                                {...register("email", { required: true })}
+                                placeholder="Электронная почта"
+                                className={styles.input}
+                            />
+                            {errors.email && <span className={styles.error}>Заполните обязательное поле</span>}
+                        </div>
                     </div>
-                    <div className={styles.input__group}>
-                        <label htmlFor="phone" className={styles.label}>
-                            Номер телефона
-                        </label>
-                        <input
-                            type="text"
-                            {...register("phone", { required: true })}
-                            placeholder="Номер телефона"
-                            className={styles.input}
-                        />
-                        {errors.phone && <span className={styles.error}>Заполните обязательное поле</span>}
-                    </div>
-                    <div className={styles.input__group}>
-                        <label htmlFor="email" className={styles.label}>
-                            Электронная почта
-                        </label>
-                        <input
-                            type="text"
-                            {...register("email", { required: true })}
-                            placeholder="Электронная почта"
-                            className={styles.input}
-                        />
-                        {errors.email && <span className={styles.error}>Заполните обязательное поле</span>}
-                    </div>
-                    <Button disabled={loading} variant="primary" type="submit" /* disabled={isLoading} onClick={onLoginClick} */>
+                    <Button
+                        className={styles.form__btn}
+                        disabled={loading}
+                        variant="primary"
+                        type="submit" /* disabled={isLoading} onClick={onLoginClick} */
+                    >
                         {loading ? <SpinnerIcon /> : "Записаться"}
                     </Button>
                 </form>

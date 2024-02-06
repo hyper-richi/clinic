@@ -1,3 +1,5 @@
+@use "../../scss/" as *;
+
 .modal {
     position: fixed;
     top: 0;
@@ -21,12 +23,22 @@
     left: 0;
     // cursor: pointer;
     z-index: var(--overlay-z-index);
+
+    @include tabletS {
+        padding: 18px;
+    }
 }
 
 .content {
     transition: 0.3s transform;
     transform: scale(0.5);
-    // max-width: 60%;
+    position: relative;
+    max-width: 1140px;
+    width: 100%;
+
+    @include mobileL {
+        width: 340px;
+    }
 }
 
 .opened {
@@ -49,4 +61,17 @@
     margin-bottom: 22px;
     width: 20px;
     height: 20px;
+    color: var(--bg-accordion);
+
+    @include mobileL {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        z-index: 10;
+        color: var(--additional-btn);
+
+        svg {
+            fill: var(--additional-btn);
+        }
+    }
 }

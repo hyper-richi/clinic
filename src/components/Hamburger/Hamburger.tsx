@@ -3,11 +3,10 @@ import { Fade } from "hamburger-react";
 import styles from "./Hamburger.module.scss";
 
 interface HamburgerProps {
-    onCloseMobileNav: () => void;
-    onShowMobileNav: () => void;
+    setOpenMobileMenu: (value: boolean) => void;
 }
 
-const Hamburger: FC<HamburgerProps> = ({ onCloseMobileNav, onShowMobileNav }) => {
+const Hamburger: FC<HamburgerProps> = ({ setOpenMobileMenu }) => {
     const [isOpen, setOpen] = useState(false);
 
     return (
@@ -20,10 +19,10 @@ const Hamburger: FC<HamburgerProps> = ({ onCloseMobileNav, onShowMobileNav }) =>
                     onToggle={(toggled) => {
                         if (toggled) {
                             // open a menu
-                            onShowMobileNav();
+                            setOpenMobileMenu(true);
                         } else {
                             // close a menu
-                            onCloseMobileNav();
+                            setOpenMobileMenu(false);
                         }
                     }}
                 />

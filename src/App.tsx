@@ -27,20 +27,12 @@ function App() {
         setOpenModal(false);
     }, []);
 
-    const onShowMobileNav = useCallback(() => {
-        setOpenMobileMenu(true);
-    }, []);
-
-    const onCloseMobileNav = useCallback(() => {
-        setOpenMobileMenu(false);
-    }, []);
-
     return (
         <div className={styles.app}>
             <header className={styles.header}>
                 <div className={classNames(styles.header__top, "container")}>
                     <div className={styles.header__box}>
-                        <Hamburger onCloseMobileNav={onCloseMobileNav} onShowMobileNav={onShowMobileNav} />
+                        <Hamburger setOpenMobileMenu={setOpenMobileMenu} />
                         <Logo fill={"#0DBC91"} />
                         <Adress />
                         <div className={styles.adress_mobile}>
@@ -58,13 +50,13 @@ function App() {
                                 +7(863) 000 00 00
                             </a>
                         </div>
-                        <Button variant="primary" onClick={onShowModal}>
+                        <Button variant="primary" onClick={() => setOpenModal(true)}>
                             Записаться на прием
                         </Button>
                     </div>
                 </div>
                 <Nav variant="header" />
-                {openMobileMenu && <MobileNav />}
+                {openMobileMenu && <MobileNav setOpenModal={setOpenModal} />}
             </header>
             <Hero />
             <main className={styles.main}>

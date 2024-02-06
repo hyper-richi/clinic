@@ -5,9 +5,8 @@
     align-items: flex-start;
     justify-content: center;
     min-height: 288px;
-    // max-height: 695px;
     width: 100%;
-    background-color: var(--bg-tab);
+    background-color: var(--bg-accordion);
     margin: 0 auto;
 
     @include tabletS {
@@ -40,9 +39,6 @@
     &__content {
         width: 100%;
         display: flex;
-        // max-width: 1140px;
-        //    margin: 0 auto;
-        //    position: relative;
         @include tabletS {
             flex-direction: column-reverse;
         }
@@ -93,9 +89,4 @@
 .picture {
     width: 100%;
     height: 100%;
-    /*  background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-     */
 }
