@@ -49,6 +49,8 @@
         "classnames": "^2.5.1",
         "emailjs-com": "^3.2.0",
         "hamburger-react": "^2.5.0",
-        "json-loader": "^0.5.7"
-    }
+        "json-loader": "^0.5.7",
+        "gh-pages": "^5.0.0"
+    },
+    "homepage": "https://kamalov-eldar.github.io/clinic"
 }
