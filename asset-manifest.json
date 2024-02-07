@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/clinic/static/css/main.da0eee6d.css",
+    "main.js": "/clinic/static/js/main.e80d7ff1.js",
+    "static/media/hero.webp": "/clinic/static/media/hero.7e1cf12a1967e060a480.webp",
+    "static/media/whatsappFooter.svg": "/clinic/static/media/whatsappFooter.0d1b6164c631eb775f9f0a5b9ce6dd56.svg",
+    "static/media/logo.svg": "/clinic/static/media/logo.6a414cdf33fb423df618b909b437858e.svg",
+    "static/media/instagram.svg": "/clinic/static/media/instagram.000ad297abf8fc870bd6cb4479cb1c68.svg",
+    "static/media/whatsapp.svg": "/clinic/static/media/whatsapp.f46a1656bb6fa5d85aa3156b9d1f4685.svg",
+    "static/media/right-arrow.svg": "/clinic/static/media/right-arrow.ffd9c8142472da69e51204232e660bf9.svg",
+    "static/media/spinnerIcon.svg": "/clinic/static/media/spinnerIcon.71ba0c67ab4c97de8c553dd3170c7222.svg",
+    "static/media/left-arrow.svg": "/clinic/static/media/left-arrow.82abaea25178a9ae26437aed4d67580c.svg",
+    "static/media/point.svg": "/clinic/static/media/point.8c43a1e3114d52fc560e8cfd49b5f5a6.svg",
+    "index.html": "/clinic/index.html",
+    "static/media/x.svg": "/clinic/static/media/x.04c7057c12183d4e2ae3256f0e3f871a.svg",
+    "static/media/plus.svg": "/clinic/static/media/plus.3293e87110244c75e32e77482f9347c1.svg",
+    "static/media/minus.svg": "/clinic/static/media/minus.ea19c6c05631eb9a0318545a60922aeb.svg",
+    "main.da0eee6d.css.map": "/clinic/static/css/main.da0eee6d.css.map",
+    "main.e80d7ff1.js.map": "/clinic/static/js/main.e80d7ff1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da0eee6d.css",
+    "static/js/main.e80d7ff1.js"
+  ]
+}
