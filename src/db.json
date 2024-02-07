@@ -27,7 +27,7 @@
             "title": "Check-UP",
             "target": "для мужчин",
             "list": ["Гормональный скрининг", "Тестостерон", "Свободный тестостерон", "Глобулин, связывающий половые гормоны"],
-            "pictureSrc": "clinic/slideImage/slide1.webp",
+            "pictureSrc": "public/slideImage/slide1.webp",
             "total": 2800,
             "discount": 3500
         },
@@ -36,7 +36,7 @@
             "title": "Check-UP",
             "target": "для женщин",
             "list": ["Гормональный скрининг", "Тестостерон", "Свободный тестостерон", "Глобулин, связывающий половые гормоны"],
-            "pictureSrc": "clinic/slideImage/slide2.webp",
+            "pictureSrc": "public/slideImage/slide2.webp",
             "total": 5800,
             "discount": 6300
         },
@@ -45,7 +45,7 @@
             "title": "General therapy",
             "target": "для всех",
             "list": ["Лаборатория", "Кардиология", "Неврология", "Стоматология"],
-            "pictureSrc": "clinic/slideImage/slide3.webp",
+            "pictureSrc": "public/slideImage/slide3.webp",
             "total": 9800,
             "discount": 2300
         }
