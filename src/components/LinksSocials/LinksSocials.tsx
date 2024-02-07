@@ -6,9 +6,15 @@ import telegramSrc from "../../assets/svg/telegram.png";
 const LinksSocials = () => {
     return (
         <div className={styles.links}>
-            <InstagramIcon />
-            <WatsappIcon />
-            <img src={telegramSrc} alt="telegram" />
+            <div className={styles.link}>
+                <InstagramIcon />
+            </div>
+            <div className={styles.link}>
+                <WatsappIcon />
+            </div>
+            <div className={styles.link}>
+                <img src={telegramSrc} alt="telegram" />
+            </div>
         </div>
     );
 };

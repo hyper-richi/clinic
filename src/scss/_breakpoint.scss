@@ -11,17 +11,18 @@ $tabletL-width: 1440px; */
         @content;
     }
 }
+
 @mixin mobileL {
     @media only screen and (max-width: $mobileL-width) {
         @content;
     }
 }
+
 @mixin tabletS {
     @media only screen and (max-width: $tabletS-width) {
         @content;
     }
 }
-
 
 @mixin tabletL {
     @media only screen and (max-width: $tabletL-width) {

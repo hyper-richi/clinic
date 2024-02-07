@@ -9,15 +9,10 @@ const Hero = () => {
                 <div className={styles.hero__content}>
                     <div className={styles.hero__wrap}>
                         <div className={styles.hero__text}>
-                            <h1 className={styles.hero__title}>
-                                Многопрофильная <br />
-                                клиника для детей
-                                <br /> и взрослых
-                            </h1>
+                            <h1 className={styles.hero__title}>Многопрофильная клиника для детей и взрослых</h1>
                             <p className={styles.hero__description}>
-                                Lorem ipsum dolor sit amet, consectetur
-                                <br /> adipiscing elit, sed do eiusmod tempor
-                                <br /> incididunt ut labore et dolore magna aliqua
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua
                             </p>
                         </div>
                     </div>

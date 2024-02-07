@@ -1,6 +1,7 @@
 import { FC, useMemo, useRef, useState } from "react";
 import { SlideItem } from "../SlideItem/SlideItem";
 import styles from "./Slide.module.scss";
+import "./Slide.module.scss";
 import data from "../../db.json";
 import { ReactComponent as LeftArrowIcon } from "../../assets/svg/left-arrow.svg";
 import { ReactComponent as RightArrowIcon } from "../../assets/svg/right-arrow.svg";
@@ -16,7 +17,11 @@ import "swiper/css/navigation";
 import Button from "../Button/Button";
 import React from "react";
 
-const Slide: FC = () => {
+interface SlideProps {
+    setOpenModal: (value: boolean) => void;
+}
+
+const Slide: FC<SlideProps> = ({ setOpenModal }) => {
     const swiperRef = useRef<SwiperCore | null>(null);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -51,8 +56,10 @@ const Slide: FC = () => {
                 }}>
                 {data.slideData.map((item, i) => {
                     return (
-                        <SwiperSlide key={i}>
-                            {({ isActive }) => <SlideItem item={item} className={`${isActive ? "active" : ""}`} />}
+                        <SwiperSlide className={styles.swiper__slide} key={i}>
+                            {({ isActive }) => (
+                                <SlideItem setOpenModal={setOpenModal} item={item} className={`${isActive ? "active" : ""}`} />
+                            )}
                         </SwiperSlide>
                     );
                 })}

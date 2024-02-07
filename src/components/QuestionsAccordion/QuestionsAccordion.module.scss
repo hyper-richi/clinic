@@ -1,10 +1,17 @@
+@use "../../scss/" as *;
+
 .accordion {
     padding: 40px;
-    padding-right: 40px;
     background-color: var(--bg-accordion);
     display: flex;
     flex-direction: column;
     gap: 16px;
+    border-radius: 5px;
+
+    @include tabletS {
+        padding: 12px;
+        gap: 14px;
+    }
 
     &__header {
         display: flex;
@@ -14,10 +21,36 @@
 
     &__btn {
         height: 33px;
+
+        @include tabletS {
+            display: none;
+        }
     }
 
     &__title {
         font-weight: 700;
         font-size: 22px;
+        line-height: 28px;
+
+        @include tabletS {
+            font-size: 18px;
+            line-height: 23px;
+        }
     }
+
+    &__description {
+        font-size: 16px;
+        line-height: 21px;
+        display: none;
+
+        @include tabletS {
+            font-size: 14px;
+            line-height: 21px;
+            display: block;
+        }
+    }
+}
+
+.show {
+    display: block;
 }

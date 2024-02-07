@@ -4,10 +4,16 @@
     margin-right: 20px;
     display: flex;
     align-items: center;
+}
 
+.footer {
     @include mobileL {
-        margin-left: 43px;
+        margin-bottom: 31px;
+    }
+}
 
+.header {
+    @include mobileL {
         svg {
             width: 62px;
             height: 18px;

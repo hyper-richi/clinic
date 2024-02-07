@@ -6,8 +6,8 @@
 
     @include tabletS {
         height: auto;
+        margin-bottom: 35px;
     }
-   
 
     &__button {
         display: flex;
@@ -25,6 +25,7 @@
     &__current {
         font-weight: 700;
     }
+
     &__total {
         color: var(--txt-additional);
     }
@@ -34,4 +35,14 @@
     margin-bottom: 34px;
 
     height: 100%;
+
+    border-radius: 5px 5px 5px 5px;
+
+    @include tabletS {
+        margin-bottom: 22px;
+    }
+}
+
+.swiper__slide {
+    height: auto !important;
 }

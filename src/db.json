@@ -8,7 +8,7 @@
         {
             "id": "2",
             "title": "Заголовок часто задаваемого вопроса с двумя абзацами",
-            "description": "Enim lectus pretium pellentesque dignissim nam massa justo dolor. Lectus pharetra molestie ac urna lorem. Nibh et vestibulum ullamcorper elit. Это предложение должно здесь быть. Massa arcu volutpat blandit augue nibh nisl fames. Sodales pharetra nisi quis purus lacinia. Sapien cras posuere dolor tincidunt quis sed adipiscing."
+            "description": "Enim lectus pretium pellentesque dignissim nam massa justo dolor. Lectus pharetra molestie ac urna lorem. Nibh et vestibulum ullamcorper elit. <br> <br> <strong> Это предложение должно здесь быть.</strong> Massa arcu volutpat blandit augue nibh nisl fames. Sodales pharetra nisi quis purus lacinia. Sapien cras posuere dolor tincidunt quis sed adipiscing. "
         },
         {
             "id": "3",

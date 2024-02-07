@@ -1,4 +1,3 @@
-// import styles from  "./App.scss";
 import classNames from "classnames";
 import styles from "./App.module.scss";
 import { ReactComponent as WhatsappIcon } from "./assets/svg/whatsapp.svg";
@@ -11,7 +10,7 @@ import Logo from "./components/Logo/Logo";
 import Nav from "./components/Nav/Nav";
 import LinksSocials from "./components/LinksSocials/LinksSocials";
 import MakeAppointmentModal from "./components/MakeAppointmentModal/MakeAppointmentModal";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import Hamburger from "./components/Hamburger/Hamburger";
 import MobileNav from "./components/MobileNav/MobileNav";
 
@@ -19,21 +18,13 @@ function App() {
     const [openModal, setOpenModal] = useState(false);
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
-    const onShowModal = useCallback(() => {
-        setOpenModal(true);
-    }, []);
-
-    const onCloseModal = useCallback(() => {
-        setOpenModal(false);
-    }, []);
-
     return (
         <div className={styles.app}>
             <header className={styles.header}>
                 <div className={classNames(styles.header__top, "container")}>
                     <div className={styles.header__box}>
                         <Hamburger setOpenMobileMenu={setOpenMobileMenu} />
-                        <Logo fill={"#0DBC91"} />
+                        <Logo variant="header" fill={"#0DBC91"} />
                         <Adress />
                         <div className={styles.adress_mobile}>
                             <a className={styles.phone_mobile} href="tel:+7(863) 000 00 00">
@@ -60,21 +51,23 @@ function App() {
             </header>
             <Hero />
             <main className={styles.main}>
-                <div className="container">
+                <div className={styles.container}>
                     <Questions />
-                    <Slide />
+                    <Slide setOpenModal={setOpenModal} />
                 </div>
             </main>
             <footer className={styles.footer}>
                 <div className="container">
                     <div className={styles.footer__content}>
-                        <Logo fill={"#FFFFFF"} />
-                        <Nav variant="footer" />
+                        <div className={styles.footer__direction}>
+                            <Logo variant="footer" fill={"#FFFFFF"} />
+                            <Nav variant="footer" />
+                        </div>
                         <LinksSocials />
                     </div>
                 </div>
             </footer>
-            <MakeAppointmentModal isOpen={openModal} onClose={onCloseModal} />
+            <MakeAppointmentModal isOpen={openModal} setOpenModal={setOpenModal} />
         </div>
     );
 }

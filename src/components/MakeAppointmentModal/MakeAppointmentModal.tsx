@@ -6,10 +6,9 @@ import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import { ReactComponent as SpinnerIcon } from "../../assets/svg/spinnerIcon.svg";
 
-// spinnerIcon
 interface MakeAppointmentModalProps {
     isOpen: boolean;
-    onClose: () => void;
+    setOpenModal: (value: boolean) => void;
 }
 
 interface FormInput {
@@ -18,7 +17,7 @@ interface FormInput {
     phone: string;
 }
 
-const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) => {
+const MakeAppointmentModal = ({ isOpen, setOpenModal }: MakeAppointmentModalProps) => {
     const [loading, setLoading] = useState(false);
     const [statusSend, setStatusSend] = useState<"success" | "error" | "">("");
 
@@ -28,10 +27,7 @@ const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) =>
         reset,
         formState: { errors },
     } = useForm<FormInput>();
-
-    /*  const onChangeFullName = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        setFullName(e.target.value);
-    }, []); */
+    console.log("errors: ", errors);
 
     const onSubmit = async (data: FormInput) => {
         setLoading(true);
@@ -58,14 +54,14 @@ const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) =>
         const timer = setTimeout(() => {
             if (statusSend === "success") {
                 setStatusSend("");
-                onClose();
+                setOpenModal(false);
             }
         }, 1500);
         return () => clearTimeout(timer);
-    }, [statusSend, reset, onClose]);
+    }, [statusSend, reset, setOpenModal]);
 
     return (
-        <Modal className="MakeAppointmentModal" isOpen={isOpen} onClose={onClose}>
+        <Modal className="MakeAppointmentModal" isOpen={isOpen} onClose={() => setOpenModal(false)}>
             <div className={styles.modal__contetnt}>
                 {statusSend === "success" && <span className={styles.success}>Сообщение успешно отправлено!</span>}
                 <div className={styles.modal__description}>
@@ -87,8 +83,8 @@ const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) =>
                                 {...register("fullName", { required: true })}
                                 placeholder="ФИО"
                                 className={styles.input}
+                                style={{ borderColor: errors.fullName && "red" }}
                             />
-                            {errors.fullName && <span className={styles.error}>Заполните обязательное поле</span>}
                         </div>
                         <div className={styles.input__group}>
                             <label htmlFor="phone" className={styles.label}>
@@ -99,8 +95,8 @@ const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) =>
                                 {...register("phone", { required: true })}
                                 placeholder="Номер телефона"
                                 className={styles.input}
+                                style={{ borderColor: errors.phone && "red" }}
                             />
-                            {errors.phone && <span className={styles.error}>Заполните обязательное поле</span>}
                         </div>
                         <div className={styles.input__group}>
                             <label htmlFor="email" className={styles.label}>
@@ -111,16 +107,12 @@ const MakeAppointmentModal = ({ isOpen, onClose }: MakeAppointmentModalProps) =>
                                 {...register("email", { required: true })}
                                 placeholder="Электронная почта"
                                 className={styles.input}
+                                style={{ borderColor: errors.email && "red" }}
                             />
-                            {errors.email && <span className={styles.error}>Заполните обязательное поле</span>}
                         </div>
+                        {errors.email && <span className={styles.error}>Все поля должны быть заполнены </span>}
                     </div>
-                    <Button
-                        className={styles.form__btn}
-                        disabled={loading}
-                        variant="primary"
-                        type="submit" /* disabled={isLoading} onClick={onLoginClick} */
-                    >
+                    <Button className={styles.form__btn} disabled={loading} variant="primary" type="submit">
                         {loading ? <SpinnerIcon /> : "Записаться"}
                     </Button>
                 </form>

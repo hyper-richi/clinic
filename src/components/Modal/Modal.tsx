@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./Modal.module.scss";
 import { FC, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { Portal } from "../Portal/Portal";
-import { Mods } from "../../global/types/global";
+import type { Mods } from "../../global/types/global";
 import Button from "../Button/Button";
 import { ReactComponent as XIcon } from "../../assets/svg/x.svg";
 

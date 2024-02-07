@@ -5,24 +5,54 @@
     display: block;
 
     @include mobileL {
+        height: 100%;
         display: none;
     }
 
     &__list {
         display: flex;
         align-items: center;
+        justify-content: center;
         height: 100%;
         gap: 30px;
         font-size: 16px;
         line-height: 24px;
         color: var(--white);
+
+        @include mobileL {
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+            padding: 0;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        height: 100%;
+
+        @include tabletS {
+            padding: 0 17px;
+        }
     }
 }
 
 .footer {
     background-color: transparent;
+    width: 100%;
+    display: block;
+
+    .nav__container {
+        padding: 0;
+    }
 }
 
 .header {
     background-color: var(--bg-nav);
+
+    .nav__list {
+        justify-content: flex-start;
+    }
 }

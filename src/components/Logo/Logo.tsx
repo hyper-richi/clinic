@@ -1,13 +1,18 @@
 import styles from "./Logo.module.scss";
 import { ReactComponent as LogoIcon } from "../../assets/svg/logo.svg";
 import { FC } from "react";
+import classNames from "classnames";
 
-type QLogoProps = {
+interface LogoProps {
     fill: string;
-};
-const Logo: FC<QLogoProps> = ({ fill }) => {
+    width?: string;
+    height?: string;
+    variant: "footer" | "header";
+}
+
+const Logo: FC<LogoProps> = ({ fill, width, height, variant }) => {
     return (
-        <a className={styles.logo} href="/">
+        <a className={classNames(styles.logo, [styles[variant]])} href="/" >
             <LogoIcon fill={fill} />
         </a>
     );

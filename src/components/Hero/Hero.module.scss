@@ -25,7 +25,7 @@
         align-items: center;
         justify-content: center;
         max-width: 950px;
-        min-width: 375px;
+        min-width: 355px;
         min-height: 533px;
 
         width: 100%;
@@ -58,31 +58,42 @@
     &__text {
         margin-top: 153px;
         width: 100%;
-        max-width: 580px;
+        width: 580px;
 
         @include tabletS {
             margin-top: 0px;
             padding: 34px 18px 53px;
+            width: auto;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: $mobileM-width) {
+            text-align: start;
         }
     }
 
     &__title {
-        word-break: break-all;
         font-size: 36px;
         font-weight: 700;
         line-height: 39px;
         margin-bottom: 14px;
-        max-width: 416px;
+        width: 347px;
 
         @include tabletS {
             font-size: 26px;
             line-height: 29px;
+            width: auto;
         }
     }
 
     &__description {
         font-size: 16px;
-        line-height: 150%;
+        line-height: 18px;
+        width: 367px;
+
+        @include tabletS {
+            width: auto;
+        }
     }
 }
 

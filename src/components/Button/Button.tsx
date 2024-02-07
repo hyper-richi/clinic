@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from "react";
-import { Mods } from "../../global/types/global";
+import type { Mods } from "../../global/types/global";
 import classNames from "classnames";
 import styles from "./Button.module.scss";
 

@@ -11,22 +11,21 @@ const Hamburger: FC<HamburgerProps> = ({ setOpenMobileMenu }) => {
 
     return (
         <div className={styles.hamburger}>
-            <div className="lg:hidden ">
-                <Fade
-                    toggled={isOpen}
-                    size={36}
-                    toggle={setOpen}
-                    onToggle={(toggled) => {
-                        if (toggled) {
-                            // open a menu
-                            setOpenMobileMenu(true);
-                        } else {
-                            // close a menu
-                            setOpenMobileMenu(false);
-                        }
-                    }}
-                />
-            </div>
+            <Fade
+                distance="md"
+                toggled={isOpen}
+                size={37}
+                toggle={setOpen}
+                onToggle={(toggled) => {
+                    if (toggled) {
+                        // open a menu
+                        setOpenMobileMenu(true);
+                    } else {
+                        // close a menu
+                        setOpenMobileMenu(false);
+                    }
+                }}
+            />
         </div>
     );
 };
