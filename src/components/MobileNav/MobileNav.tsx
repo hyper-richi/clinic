@@ -4,7 +4,7 @@ import { FC } from "react";
 import Button from "../Button/Button";
 
 interface MobileNavProps {
-    setOpenModal: (value:boolean) => void;
+    setOpenModal: (value: boolean) => void;
 }
 
 const MobileNav: FC<MobileNavProps> = ({ setOpenModal }) => {
@@ -12,19 +12,19 @@ const MobileNav: FC<MobileNavProps> = ({ setOpenModal }) => {
         <nav className={classNames(styles.nav)}>
             <ul className={classNames(styles.nav__list)}>
                 <li className={styles.nav__item}>
-                    <a href="/">О клинике</a>
+                    <a href="/clinic">О клинике</a>
                 </li>
                 <li className={styles.nav__item}>
-                    <a href="/">Услуги</a>
+                    <a href="/clinic">Услуги</a>
                 </li>
                 <li className={styles.nav__item}>
-                    <a href="/">Специалисты</a>
+                    <a href="/clinic">Специалисты</a>
                 </li>
                 <li className={styles.nav__item}>
-                    <a href="/">Цены</a>
+                    <a href="/clinic">Цены</a>
                 </li>
                 <li className={styles.nav__item}>
-                    <a href="/">Контакты</a>
+                    <a href="/clinic">Контакты</a>
                 </li>
             </ul>
             <Button className={styles.btn} variant="primary" onClick={() => setOpenModal(true)}>

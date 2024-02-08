@@ -27,7 +27,6 @@ const MakeAppointmentModal = ({ isOpen, setOpenModal }: MakeAppointmentModalProp
         reset,
         formState: { errors },
     } = useForm<FormInput>();
-    console.log("errors: ", errors);
 
     const onSubmit = async (data: FormInput) => {
         setLoading(true);
@@ -63,7 +62,6 @@ const MakeAppointmentModal = ({ isOpen, setOpenModal }: MakeAppointmentModalProp
     return (
         <Modal className="MakeAppointmentModal" isOpen={isOpen} onClose={() => setOpenModal(false)}>
             <div className={styles.modal__contetnt}>
-                {statusSend === "success" && <span className={styles.success}>Сообщение успешно отправлено!</span>}
                 <div className={styles.modal__description}>
                     <h1 className={styles.modal__title}>
                         Запишитесь <br /> на приём онлайн
@@ -111,6 +109,10 @@ const MakeAppointmentModal = ({ isOpen, setOpenModal }: MakeAppointmentModalProp
                             />
                         </div>
                         {errors.email && <span className={styles.error}>Все поля должны быть заполнены </span>}
+                        {statusSend === "error" && (
+                            <span className={styles.error}>Сбой сети! повторите отправку еще раз, или перезагрузите страницу. </span>
+                        )}
+                        {statusSend === "success" && <span className={styles.success}>Сообщение успешно отправлено!</span>}
                     </div>
                     <Button className={styles.form__btn} disabled={loading} variant="primary" type="submit">
                         {loading ? <SpinnerIcon /> : "Записаться"}

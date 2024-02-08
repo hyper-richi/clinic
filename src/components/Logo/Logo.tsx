@@ -12,7 +12,7 @@ interface LogoProps {
 
 const Logo: FC<LogoProps> = ({ fill, width, height, variant }) => {
     return (
-        <a className={classNames(styles.logo, [styles[variant]])} href="/" >
+        <a className={classNames(styles.logo, [styles[variant]])} href="/clinic" >
             <LogoIcon fill={fill} />
         </a>
     );
