@@ -5,12 +5,10 @@
     background-color: var(--bg-accordion);
     display: flex;
     flex-direction: column;
-    gap: 16px;
     border-radius: 5px;
 
     @include tabletS {
         padding: 12px;
-        gap: 14px;
     }
 
     &__header {
@@ -41,16 +39,24 @@
     &__description {
         font-size: 16px;
         line-height: 21px;
-        display: none;
+
+        opacity: 0;
+        transition: all 0.5s;
+        height: 0;
+        margin: 0;
 
         @include tabletS {
             font-size: 14px;
             line-height: 21px;
-            display: block;
+            height: auto;
+            opacity: 1;
+            margin-top: 14px;
         }
     }
 }
 
 .show {
-    display: block;
+    height: auto;
+    opacity: 1;
+    margin-top: 16px;
 }
