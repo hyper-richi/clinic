@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/clinic/static/css/main.5c7519a5.css",
+    "main.css": "/clinic/static/css/main.076d595e.css",
     "main.js": "/clinic/static/js/main.32f39643.js",
     "static/media/hero.webp": "/clinic/static/media/hero.7e1cf12a1967e060a480.webp",
     "static/media/whatsappFooter.svg": "/clinic/static/media/whatsappFooter.0d1b6164c631eb775f9f0a5b9ce6dd56.svg",
@@ -15,11 +15,11 @@
     "static/media/x.svg": "/clinic/static/media/x.04c7057c12183d4e2ae3256f0e3f871a.svg",
     "static/media/plus.svg": "/clinic/static/media/plus.3293e87110244c75e32e77482f9347c1.svg",
     "static/media/minus.svg": "/clinic/static/media/minus.ea19c6c05631eb9a0318545a60922aeb.svg",
-    "main.5c7519a5.css.map": "/clinic/static/css/main.5c7519a5.css.map",
+    "main.076d595e.css.map": "/clinic/static/css/main.076d595e.css.map",
     "main.32f39643.js.map": "/clinic/static/js/main.32f39643.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c7519a5.css",
+    "static/css/main.076d595e.css",
     "static/js/main.32f39643.js"
   ]
 }
