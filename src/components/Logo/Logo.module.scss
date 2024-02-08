@@ -4,15 +4,25 @@
     margin-right: 20px;
     display: flex;
     align-items: center;
+
+    &:hover {
+        opacity: 0.5;
+    }
+    &:active {
+        opacity: 0.9;
+    }
 }
 
 .footer {
+    color: var(--white);
     @include mobileL {
         margin-bottom: 31px;
     }
 }
 
 .header {
+    color: var(--primary-btn);
+
     @include mobileL {
         svg {
             width: 62px;

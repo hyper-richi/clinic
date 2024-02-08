@@ -64,16 +64,24 @@ const Slide: FC<SlideProps> = ({ setOpenModal }) => {
                     );
                 })}
             </Swiper>
-            <div className={styles.slide__button}>
-                <Button disabled={!currentIndex} variant="clear" onClick={() => swiperRef.current?.slidePrev()}>
-                    <LeftArrowIcon fill={!currentIndex ? "#E1E1E1" : "#0DBC91"} />
+            <div className={styles.slide__btns}>
+                <Button
+                    className={styles.slide__btn}
+                    disabled={!currentIndex}
+                    variant="clear"
+                    onClick={() => swiperRef.current?.slidePrev()}>
+                    <LeftArrowIcon color={!currentIndex ? "#E1E1E1" : "#0DBC91"} />
                 </Button>
                 <div className={styles.slide__count}>
                     <span className={styles.slide__current}>{currentIndex + 1}</span>
                     <span className={styles.slide__total}>/{totalSlide}</span>
                 </div>
-                <Button disabled={currentIndex === 2} variant="clear" onClick={() => swiperRef.current?.slideNext()}>
-                    <RightArrowIcon fill={currentIndex === 2 ? "#E1E1E1" : "#0DBC91"} />
+                <Button
+                    className={styles.slide__btn}
+                    disabled={currentIndex === 2}
+                    variant="clear"
+                    onClick={() => swiperRef.current?.slideNext()}>
+                    <RightArrowIcon color={currentIndex === 2 ? "#E1E1E1" : "#0DBC91"} />
                 </Button>
             </div>
         </div>

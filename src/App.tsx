@@ -24,7 +24,7 @@ function App() {
                 <div className={classNames(styles.header__top, "container")}>
                     <div className={styles.header__box}>
                         <Hamburger setOpenMobileMenu={setOpenMobileMenu} />
-                        <Logo variant="header" fill={"#0DBC91"} />
+                        <Logo variant="header" />
                         <Adress />
                         <div className={styles.adress_mobile}>
                             <a className={styles.phone_mobile} href="tel:+7(863) 000 00 00">
@@ -60,7 +60,7 @@ function App() {
                 <div className="container">
                     <div className={styles.footer__content}>
                         <div className={styles.footer__direction}>
-                            <Logo variant="footer" fill={"#FFFFFF"} />
+                            <Logo variant="footer" />
                             <Nav variant="footer" />
                         </div>
                         <LinksSocials />

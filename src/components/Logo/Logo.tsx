@@ -4,16 +4,13 @@ import { FC } from "react";
 import classNames from "classnames";
 
 interface LogoProps {
-    fill: string;
-    width?: string;
-    height?: string;
     variant: "footer" | "header";
 }
 
-const Logo: FC<LogoProps> = ({ fill, width, height, variant }) => {
+const Logo: FC<LogoProps> = ({ variant }) => {
     return (
-        <a className={classNames(styles.logo, [styles[variant]])} href="/clinic" >
-            <LogoIcon fill={fill} />
+        <a className={classNames(styles.logo, [styles[variant]])} href="/clinic">
+            <LogoIcon />
         </a>
     );
 };

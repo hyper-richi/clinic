@@ -46,6 +46,15 @@
 
         height: 100%;
         margin-right: 35px;
+
+        .phone {
+            &:hover {
+                opacity: 0.5;
+            }
+            &:active {
+                opacity: 0.9;
+            }
+        }
     }
 
     &__box__phone {
@@ -121,6 +130,13 @@
 .phone_mobile {
     font-size: 16px;
     font-weight: 700;
+
+    &:hover {
+        opacity: 0.5;
+    }
+    &:active {
+        opacity: 0.9;
+    }
 }
 
 .adress__city_mobile {
