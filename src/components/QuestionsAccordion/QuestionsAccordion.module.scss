@@ -23,6 +23,15 @@
         @include tabletS {
             display: none;
         }
+
+        svg {
+            &:hover {
+                opacity: 0.5;
+            }
+            &:active {
+                opacity: 0.9;
+            }
+        }
     }
 
     &__title {
