@@ -45,27 +45,26 @@
         }
     }
 
+    &__content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+
+        &.open {
+            max-height: 500px; // A reasonable value to accommodate the content
+            opacity: 1;
+        }
+    }
+
     &__description {
         font-size: 16px;
         line-height: 21px;
-
-        opacity: 0;
-        transition: all 0.5s;
-        height: 0;
         margin: 0;
 
         @include tabletS {
             font-size: 14px;
             line-height: 21px;
-            height: auto;
-            opacity: 1;
-            margin-top: 14px;
         }
     }
-}
-
-.show {
-    height: auto;
-    opacity: 1;
-    margin-top: 16px;
 }

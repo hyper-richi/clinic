@@ -12,17 +12,26 @@ type QuestionsAccordionProps = {
 };
 
 const QuestionsAccordion: FC<QuestionsAccordionProps> = ({ question }) => {
-    const [closeAccordion, setCloseAccordion] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleAccordion = () => setIsOpen((prev) => !prev);
 
     return (
         <div className={styles.accordion}>
             <div className={styles.accordion__header}>
                 <h3 className={styles.accordion__title}>{question.title}</h3>
-                <Button className={styles.accordion__btn} onClick={() => setCloseAccordion(!closeAccordion)} variant="clear">
-                    {closeAccordion ? <PlusIcon /> : <MinusIcon />}
+                <Button
+                    className={styles.accordion__btn}
+                    onClick={toggleAccordion}
+                    variant="clear"
+                    aria-expanded={isOpen}
+                    aria-controls={`accordion-content-${question.id}`}>
+                    {isOpen ? <MinusIcon /> : <PlusIcon />}
                 </Button>
             </div>
-            <p className={classNames(styles.accordion__description, !closeAccordion && styles.show)}>{parse(question.description)}</p>
+            <div id={`accordion-content-${question.id}`} className={classNames(styles.accordion__content, { [styles.open]: isOpen })}>
+                <p className={styles.accordion__description}>{parse(question.description)}</p>
+            </div>
         </div>
     );
 };
